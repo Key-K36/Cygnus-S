@@ -21,7 +21,6 @@ manifest:
       path: modules/zmk-pmw3610-driver
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: main
       revision: v0.3
 
   self:
