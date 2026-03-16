@@ -14,10 +14,6 @@
     quick-tap-ms = <0>;
 };
 
-&msc {
-    acceleration-delay = <0>;
-    time-to-max-speed-ms = <300>;
-};
 
 / {
     combos {
