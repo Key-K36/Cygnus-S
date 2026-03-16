@@ -14,7 +14,6 @@
     quick-tap-ms = <0>;
 };
 
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -578,10 +577,10 @@
 
         MOUSE_NUM {
             bindings = <
-&lt 4 F9                         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                &mt KP_MULTIPLY KP_DIVIDE                                                                    &tap_row_colum_group           &ht_shiftclick_controlclick 0 0  &mkp LCLK       &msc SCRL_UP      &tap_rclk
-&mt F12 F4                       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                &mt KP_MINUS KP_PLUS       &trans                                &trans                      &window_hold                   &ht_calculation_on_off 0 0       &msc SCRL_LEFT  &msc SCRL_DOWN    &msc SCRL_RIGHT
-&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                &mt COMMA KP_DOT           &mt LC(KP_NUMBER_0) LC(NUMBER_1)      &trans                      &tap_row_colum                 &merging_cells                   &tap_equal      &tap_vlook_round  &tap_paste
-&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &mt LS(HOME) LEFT_PARENTHESIS  &lt 2 SPACE                &mt LS(END) RIGHT_PARENTHESIS         &mt LC(PAGE_UP) LEFT_ARROW  &mt LC(PAGE_DOWN) RIGHT_ARROW                                                                     &mt LC(V) LC(LS(V))
+&mt F12 F9                       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9    &mt KP_MULTIPLY KP_DIVIDE                                                                         &tap_row_colum_group               &ht_shiftclick_controlclick 0 0  &mkp LCLK       &msc SCRL_UP      &tap_rclk
+&kp F4                           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6    &mt KP_MINUS KP_PLUS       &trans                                &trans                           &window_hold                       &ht_calculation_on_off 0 0       &msc SCRL_LEFT  &msc SCRL_DOWN    &msc SCRL_RIGHT
+&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3    &mt COMMA KP_DOT           &mt LC(KP_NUMBER_0) LC(NUMBER_1)      &trans                           &tap_row_colum                     &merging_cells                   &tap_equal      &tap_vlook_round  &tap_paste
+&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LC(PAGE_UP)  &lt 2 SPACE                &kp LS(PAGE_DOWN)                     &mt LEFT_PARENTHESIS LEFT_ARROW  &mt RIGHT_PARENTHESIS RIGHT_ARROW                                                                     &kp LC(V)
             >;
         };
 
