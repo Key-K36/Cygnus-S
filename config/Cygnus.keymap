@@ -349,6 +349,20 @@
             bindings = <&kp EQUAL &kp I &kp F &kp N &kp A &kp LEFT_PARENTHESIS &kp V &kp L &kp O &kp O &kp K &kp U &kp P &kp LEFT_PARENTHESIS>;
             label = "VLOOKUP";
         };
+
+        ctrl_shift_v: ctrl_shift_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK &kp LC(V)>;
+            label = "CTRL_SHIFT_V";
+        };
+
+        ctrl_v: ctrl_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK &kp V>;
+            label = "CTRL_V";
+        };
     };
 
     behaviors {
@@ -560,6 +574,28 @@
             tapping-term-ms = <250>;
             label = "TAP_VLOOK_ROUND";
         };
+
+        ht_kp_csv: ht_kp_csv {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&ctrl_shift_v>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            label = "HT_KP_CSV";
+        };
+
+        ht_kp_cv: ht_kp_cv {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&ctrl_v>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            label = "HT_KP_CV";
+        };
     };
 
     keymap {
@@ -578,10 +614,10 @@
 
         MOUSE_NUM {
             bindings = <
-&mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &mt F12 KP_MULTIPLY                                                                    &tap_row_colum_group           &ht_shiftclick_controlclick 0 0  &mkp LCLK           &msc SCRL_UP      &tap_rclk
-&mt LA(F4) KP_MINUS              &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt LG(E) KP_PLUS    &trans                                &trans                      &window_hold                   &ht_calculation_on_off 0 0       &kp LA(LEFT_ARROW)  &msc SCRL_DOWN    &kp LA(RIGHT_ARROW)
-&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &mt COMMA KP_DOT     &mt LC(KP_NUMBER_0) LC(NUMBER_1)      &trans                      &tap_row_colum                 &merging_cells                   &tap_equal          &tap_vlook_round  &tap_paste
-&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LS(HOME)   &lt 2 SPACE          &kp LS(END)                           &mt LC(PAGE_UP) LEFT_ARROW  &mt LC(PAGE_DOWN) RIGHT_ARROW                                                                         &mt F4 LC(V)
+&mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &mt F12 KP_MULTIPLY                                               &tap_row_colum_group           &ht_shiftclick_controlclick 0 0  &mkp LCLK                    &msc SCRL_UP      &tap_rclk
+&mt LA(F4) KP_MINUS              &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt LG(E) KP_PLUS    &trans           &trans                      &window_hold                   &ht_calculation_on_off 0 0       &ht_kp_csv LA(LEFT_ARROW) 0  &msc SCRL_DOWN    &ht_kp_cv LA(RIGHT_ARROW) 0
+&ht_doublezero_kp 0 KP_NUMBER_0  &kp NUMBER_1     &kp KP_NUMBER_2  &kp KP_NUMBER_3  &mt COMMA KP_DOT     &trans           &trans                      &tap_row_colum                 &merging_cells                   &tap_paste                   &tap_vlook_round  &tap_equal
+&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LS(HOME)   &lt 2 SPACE          &kp LS(END)      &mt LC(PAGE_UP) LEFT_ARROW  &mt LC(PAGE_DOWN) RIGHT_ARROW                                                                                  &mt LEFT_CONTROL F4
             >;
         };
 
