@@ -26,7 +26,7 @@
         };
 
         language {
-            bindings = <&mt LA(LS(CAPSLOCK)) LS(CAPSLOCK)>;
+            bindings = <&mt CAPSLOCK F13>;
             key-positions = <0 1>;
             layers = <0 2>;
         };
@@ -603,10 +603,10 @@
 
         default_layer {
             bindings = <
-&mt Q TAB                                &mt LS(W) W                          &mt LS(E) E                       &mt LS(R) R                          &mt LS(T) T                                                                                                        &mt LS(Y) Y                         &mt LS(U) U  &mt LS(I) I          &mt LS(O) O         &mt LS(P) P
-&mt LS(A) A                              &mt LS(S) S                          &mt LS(D) D                       &mt LS(F) F                          &mt LS(G) G                   &mt LG(LS(S)) ESCAPE                              &mt LEFT_PARENTHESIS UP_ARROW      &mt LS(H) H                         &mt LS(J) J  &mt LS(K) K          &mt LS(L) L         &mt LS(MINUS) MINUS
-&mt LEFT_SHIFT Z                         &mt LS(X) X                          &mt LS(C) C                       &mt LS(V) V                          &mt LS(B) B                   &tap_enter                                        &mt RIGHT_PARENTHESIS DOWN_ARROW   &mt LS(N) N                         &mt LS(M) M  &mt LS(COMMA) COMMA  &mt LS(DOT) PERIOD  &mt LEFT_SHIFT SLASH
-&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold HOME BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold END LANG_ZENKAKUHANKAKU      &lt_exit_AML_on_hold 2 LEFT_ARROW  &lt_exit_AML_on_hold 1 RIGHT_ARROW                                                        &mt_exit_AML_on_hold LEFT_CONTROL ENTER
+&mt Q TAB                                &mt LS(W) W                          &mt LS(E) E                       &mt LS(R) R                          &mt LS(T) T                                                                                        &mt LS(Y) Y                         &mt LS(U) U  &mt LS(I) I          &mt LS(O) O         &mt LS(P) P
+&mt LS(A) A                              &mt LS(S) S                          &mt LS(D) D                       &mt LS(F) F                          &mt LS(G) G                   &mt LG(LS(S)) ESCAPE              &mt LEFT_PARENTHESIS UP_ARROW      &mt LS(H) H                         &mt LS(J) J  &mt LS(K) K          &mt LS(L) L         &mt LS(MINUS) MINUS
+&mt LEFT_SHIFT Z                         &mt LS(X) X                          &mt LS(C) C                       &mt LS(V) V                          &mt LS(B) B                   &tap_enter                        &mt RIGHT_PARENTHESIS DOWN_ARROW   &mt LS(N) N                         &mt LS(M) M  &mt LS(COMMA) COMMA  &mt LS(DOT) PERIOD  &mt LEFT_SHIFT SLASH
+&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold HOME BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold END F13      &lt_exit_AML_on_hold 2 LEFT_ARROW  &lt_exit_AML_on_hold 1 RIGHT_ARROW                                                        &mt_exit_AML_on_hold LEFT_CONTROL ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP>;
@@ -617,7 +617,7 @@
 &mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &mt F12 KP_MULTIPLY                                               &tap_row_colum_group           &ht_shiftclick_controlclick 0 0  &mkp LCLK                    &msc SCRL_UP      &tap_rclk
 &mt LA(F4) KP_MINUS              &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &mt LG(E) KP_PLUS    &trans           &trans                      &window_hold                   &ht_calculation_on_off 0 0       &ht_kp_csv LA(LEFT_ARROW) 0  &msc SCRL_DOWN    &ht_kp_cv LA(RIGHT_ARROW) 0
 &ht_doublezero_kp 0 KP_NUMBER_0  &kp NUMBER_1     &kp KP_NUMBER_2  &kp KP_NUMBER_3  &mt COMMA KP_DOT     &trans           &trans                      &tap_row_colum                 &merging_cells                   &tap_paste                   &tap_vlook_round  &tap_equal
-&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LS(HOME)   &lt 2 SPACE          &kp LS(END)      &mt LC(PAGE_UP) LEFT_ARROW  &mt LC(PAGE_DOWN) RIGHT_ARROW                                                                                  &mt LEFT_CONTROL F4
+&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LS(HOME)   &lt 2 F14            &kp LS(END)      &mt LC(PAGE_UP) LEFT_ARROW  &mt LC(PAGE_DOWN) RIGHT_ARROW                                                                                  &mt LEFT_CONTROL F4
             >;
         };
 
