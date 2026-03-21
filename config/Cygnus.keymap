@@ -610,7 +610,6 @@
         };
     };
 
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -630,7 +629,7 @@
 &mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &mt F12 KP_MULTIPLY                                                                     &ht_colum_cut_minus 0 0  &ht_shiftclick_controlclick 0 0  &mkp LCLK      &msc SCRL_UP         &tap_rclk
 &mt LA(F4) KP_MINUS              &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &mt LG(E) KP_PLUS    &trans                                  &mt LC(NUMBER_1) UP_ARROW  &window_hold             &ht_calculation_on_off 0 0       &kp LC(LS(V))  &msc SCRL_DOWN       &kp LC(V)
 &ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &mt COMMA KP_DOT     &tap_equal                              &mt LC(SPACE) DOWN_ARROW   &ht_colum_copy_plus 0 0  &merging_cells                   &tap_paste     &ht_colum_group 0 0  &ht_row_group 0 0
-&mt LC(LS(PAGE_UP)) LC(PAGE_UP)  &tap_look        &tap_round       &lt 4 LA(LEFT_ARROW)  &lt 2 INT_MUHENKAN   &mt LC(LEFT_SHIFT) LA(RIGHT_ARROW)      &tap_row_cut_minus         &tap_row_copy_plus                                                                            &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)
+&mt LC(LS(PAGE_UP)) LC(PAGE_UP)  &tap_look        &tap_round       &lt 4 LA(LEFT_ARROW)  &lt 2 F14            &mt LC(LEFT_SHIFT) LA(RIGHT_ARROW)      &tap_row_cut_minus         &tap_row_copy_plus                                                                            &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)
             >;
         };
 
