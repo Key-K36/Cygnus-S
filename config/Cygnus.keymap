@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 30
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -457,6 +457,17 @@
             label = "HT_CALCULATION_ON_OFF";
         };
 
+        ht_doublezero_kp: ht_doublezero_kp {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&double_zero>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            label = "HT_DOUBLEZERO_KP";
+        };
+
         ht_row_copy_plus: ht_row_copy_plus {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&row_plus>, <&row_copy>;
@@ -553,13 +564,13 @@
             label = "TAP_PASTE";
         };
 
-        tap_equal: tap_equal {
+        tap_rclk: tap_rclk {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mt BACKSLASH EQUAL>, <&sum>, <&sumproduct>;
+            bindings = <&mkp RCLK>, <&name_change>;
 
             tapping-term-ms = <250>;
-            label = "TAP_EQUAL";
+            label = "TAP_RCLK";
         };
 
         tap_enter: tap_enter {
@@ -571,24 +582,13 @@
             label = "TAP_ENTER";
         };
 
-        ht_doublezero_kp: ht_doublezero_kp {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&double_zero>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-            label = "HT_DOUBLEZERO_KP";
-        };
-
-        tap_rclk: tap_rclk {
+        tap_equal: tap_equal {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mkp RCLK>, <&name_change>;
+            bindings = <&mt BACKSLASH EQUAL>, <&sum>, <&sumproduct>;
 
             tapping-term-ms = <250>;
-            label = "TAP_RCLK";
+            label = "TAP_EQUAL";
         };
 
         tap_look: tap_look {
@@ -609,6 +609,7 @@
             label = "TAP_ROUND";
         };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
