@@ -512,7 +512,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&mt LC(SPACE) LC(PAGE_DOWN)>,
+                <&mt LC(SPACE) LC(PAGE_UP)>,
                 <&ht_row_cut_minus 0 0>,
                 <&kp LA(LS(LEFT_ARROW))>;
 
