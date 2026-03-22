@@ -78,6 +78,18 @@
             key-positions = <1 0>;
             layers = <1>;
         };
+
+        scrl_up {
+            bindings = <&msc SCRL_UP>;
+            key-positions = <8 7>;
+            layers = <1 4>;
+        };
+
+        scrl_down {
+            bindings = <&msc SCRL_DOWN>;
+            key-positions = <19 20>;
+            layers = <1 4>;
+        };
     };
 
     macros {
@@ -287,34 +299,6 @@
             label = "COLUM_CUT";
         };
 
-        row_group_on: row_group_on {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(SPACE) &kp LA(LS(RIGHT_ARROW))>;
-            label = "ROW_GROUP_ON";
-        };
-
-        row_group_off: row_group_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(SPACE) &kp LA(LS(LEFT_ARROW))>;
-            label = "ROW_GROUP_OFF";
-        };
-
-        colum_group_on: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &kp LA(LS(RIGHT_ARROW))>;
-            label = "NEW_MACRO";
-        };
-
-        colum_group_off: colum_group_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &kp LA(LS(LEFT_ARROW))>;
-            label = "COLUM_GROUP_OFF";
-        };
-
         name_change: name_change {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -512,32 +496,13 @@
             label = "HT_COLUM_CUT_MINUS";
         };
 
-        ht_row_group: ht_row_group {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&row_group_off>, <&row_group_on>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-            label = "HT_ROW_GROUP";
-        };
-
-        ht_colum_group: ht_colum_group {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&colum_group_off>, <&colum_group_on>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-            label = "HT_COLUM_GROUP";
-        };
-
         tap_row_copy_plus: tap_row_copy_plus {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mt LS(SPACE) RIGHT_ARROW>, <&ht_row_copy_plus 0 0>;
+            bindings =
+                <&mt LS(SPACE) RIGHT_ARROW>,
+                <&ht_row_copy_plus 0 0>,
+                <&kp LA(LS(RIGHT_ARROW))>;
 
             tapping-term-ms = <250>;
             label = "TAP_ROW_COPY_PLUS";
@@ -546,7 +511,10 @@
         tap_row_cut_minus: tap_row_cut_minus {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mt F4 LEFT_ARROW>, <&ht_row_cut_minus 0 0>;
+            bindings =
+                <&mt LC(SPACE) LEFT_ARROW>,
+                <&ht_row_cut_minus 0 0>,
+                <&kp LA(LS(LEFT_ARROW))>;
 
             tapping-term-ms = <250>;
             label = "TAP_ROW_CUT_MINUS";
@@ -626,10 +594,10 @@
 
         MOUSE_NUM {
             bindings = <
-&mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &mt F12 KP_MULTIPLY                                                                     &ht_colum_cut_minus 0 0  &ht_shiftclick_controlclick 0 0  &mkp LCLK      &msc SCRL_UP         &tap_rclk
-&mt LA(F4) KP_MINUS              &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &mt LG(E) KP_PLUS    &trans                                  &mt LC(NUMBER_1) UP_ARROW  &window_hold             &ht_calculation_on_off 0 0       &kp LC(LS(V))  &msc SCRL_DOWN       &kp LC(V)
-&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &mt COMMA KP_DOT     &tap_equal                              &mt LC(SPACE) DOWN_ARROW   &ht_colum_copy_plus 0 0  &merging_cells                   &tap_paste     &ht_colum_group 0 0  &ht_row_group 0 0
-&mt LC(LS(PAGE_UP)) LC(PAGE_UP)  &tap_look        &tap_round       &lt 4 LA(LEFT_ARROW)  &lt 2 F14            &mt LC(LEFT_SHIFT) LA(RIGHT_ARROW)      &tap_row_cut_minus         &tap_row_copy_plus                                                                            &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)
+&mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &mt F12 KP_MULTIPLY                                                                     &ht_colum_cut_minus 0 0  &ht_shiftclick_controlclick 0 0  &kp LC(LS(V))   &kp LC(V)        &tap_equal
+&mt LA(F4) KP_MINUS              &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &mt LG(E) KP_PLUS    &trans                                  &mt LC(NUMBER_1) UP_ARROW  &window_hold             &mkp LCLK                        &msc SCRL_LEFT  &msc SCRL_RIGHT  &tap_rclk
+&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &mt COMMA KP_DOT     &ht_calculation_on_off 0 0              &mt F4 DOWN_ARROW          &ht_colum_copy_plus 0 0  &merging_cells                   &tap_paste      &tap_look        &tap_round
+&mt LC(LS(PAGE_UP)) LC(PAGE_UP)  &trans           &trans           &lt 4 LA(LEFT_ARROW)  &lt 2 F14            &mt LC(LEFT_SHIFT) LA(RIGHT_ARROW)      &tap_row_cut_minus         &tap_row_copy_plus                                                                         &mt LC(LS(PAGE_DOWN)) LC(PAGE_DOWN)
             >;
         };
 
