@@ -425,17 +425,6 @@
             label = "MT_EXIT_AML_ON_HOLD";
         };
 
-        ht_shiftclick_controlclick: ht_shiftclick_controlclick {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&control_click>, <&shift_click>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-            label = "HT_SHIFTCLICK_CONTROLCLICK";
-        };
-
         ht_calculation_on_off: ht_calculation_on_off {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&auto_calculation>, <&auto_calculation_off>;
@@ -600,10 +589,10 @@
 
         MOUSE_NUM {
             bindings = <
-&mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &mt F12 KP_MULTIPLY                                                       &ht_colum_cut_minus 0 0  &mkp LCLK                        &msc SCRL_LEFT       &msc SCRL_RIGHT  &tap_rclk
-&mt LG(E) TAB                    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &mt KP_MINUS KP_PLUS  &trans                          &trans              &window_hold             &ht_shiftclick_controlclick 0 0  &kp LC(LS(V))        &tap_paste       &tap_equal
-&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &mt COMMA KP_DOT      &ht_calculation_on_off 0 0      &trans              &ht_colum_copy_plus 0 0  &control_click                   &mt LC(NUMBER_1) F4  &tap_round       &tap_look
-&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LA(LEFT_ARROW)  &lt 2 F14             &kp LA(RIGHT_ARROW)             &tap_row_cut_minus  &tap_row_copy_plus                                                                              &mt LEFT_CONTROL LA(TAB)
+&mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &mt F12 KP_MULTIPLY                                                       &ht_colum_cut_minus 0 0  &shift_click    &msc SCRL_LEFT       &msc SCRL_RIGHT  &tap_rclk
+&mt LG(E) TAB                    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &mt KP_MINUS KP_PLUS  &trans                          &trans              &window_hold             &mkp LCLK       &kp LC(LS(V))        &tap_paste       &tap_equal
+&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &mt COMMA KP_DOT      &ht_calculation_on_off 0 0      &trans              &ht_colum_copy_plus 0 0  &control_click  &mt LC(NUMBER_1) F4  &tap_round       &tap_look
+&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LA(LEFT_ARROW)  &lt 2 F14             &kp LA(RIGHT_ARROW)             &tap_row_cut_minus  &tap_row_copy_plus                                                             &mt LEFT_CONTROL LA(TAB)
             >;
         };
 
