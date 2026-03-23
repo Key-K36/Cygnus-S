@@ -33,37 +33,7 @@
 
         f7 {
             bindings = <&kp F7>;
-            key-positions = <8 7 9>;
-            layers = <0>;
-        };
-
-        backslash {
-            bindings = <&mt LS(BACKSLASH) BACKSLASH>;
             key-positions = <8 7>;
-            layers = <0>;
-        };
-
-        at_tilde {
-            bindings = <&mt TILDE AT_SIGN>;
-            key-positions = <20 19>;
-            layers = <0>;
-        };
-
-        left_bracket {
-            bindings = <&mt LS(LEFT_BRACKET) LEFT_BRACKET>;
-            key-positions = <20 21>;
-            layers = <0>;
-        };
-
-        right_braclet {
-            bindings = <&mt LS(RIGHT_BRACKET) RIGHT_BRACKET>;
-            key-positions = <32 33>;
-            layers = <0>;
-        };
-
-        colom_semi {
-            bindings = <&mt SEMICOLON COLON>;
-            key-positions = <32 31>;
             layers = <0>;
         };
 
@@ -79,9 +49,15 @@
             layers = <1>;
         };
 
+        num_mergin {
+            bindings = <&merging_cells>;
+            key-positions = <41 40>;
+            layers = <1>;
+        };
+
         scrl_up {
             bindings = <&msc SCRL_UP>;
-            key-positions = <8 7>;
+            key-positions = <7 8>;
             layers = <1 4>;
         };
 
@@ -89,12 +65,6 @@
             bindings = <&msc SCRL_DOWN>;
             key-positions = <19 20>;
             layers = <1 4>;
-        };
-
-        num_mergin {
-            bindings = <&merging_cells>;
-            key-positions = <41 40>;
-            layers = <1>;
         };
     };
 
@@ -536,10 +506,10 @@
 
         default_layer {
             bindings = <
-&mt LS(Q) Q                              &mt LS(W) W                          &mt LS(E) E                       &mt LS(R) R                              &mt LS(T) T                                                                                                             &mt LS(Y) Y                         &mt LS(U) U  &mt LS(I) I          &mt LS(O) O         &mt LS(P) P
-&mt LS(A) A                              &mt LS(S) S                          &mt LS(D) D                       &mt LS(F) F                              &mt LS(G) G                   &mt LG(LS(S)) ESCAPE                      &mt LEFT_PARENTHESIS UP_ARROW                   &mt LS(H) H                         &mt LS(J) J  &mt LS(K) K          &mt LS(L) L         &mt LS(MINUS) MINUS
-&mt LEFT_SHIFT Z                         &mt LS(X) X                          &mt LS(C) C                       &mt LS(V) V                              &mt LS(B) B                   &tap_enter                                &mt RIGHT_PARENTHESIS DOWN_ARROW                &mt LS(N) N                         &mt LS(M) M  &mt LS(COMMA) COMMA  &mt LS(DOT) PERIOD  &mt LEFT_SHIFT SLASH
-&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold LS(HOME) BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold LS(END) LS(TAB)      &mt_exit_AML_on_hold LC(LEFT_SHIFT) LEFT_ARROW  &lt_exit_AML_on_hold 1 RIGHT_ARROW                                                        &mt_exit_AML_on_hold LEFT_CONTROL ENTER
+&kp Q                                    &kp W                                &kp E                             &kp R                                    &kp T                                                                                                                   &kp Y                               &kp U  &mt TILDE I          &mt O LEFT_BRACKET   &mt BACKSLASH P
+&kp A                                    &kp S                                &kp D                             &kp F                                    &kp G                         &mt LG(LS(S)) ESCAPE                      &mt LEFT_PARENTHESIS UP_ARROW                   &kp H                               &kp J  &mt AT_SIGN K        &mt RIGHT_BRACKET L  &mt LS(MINUS) MINUS
+&mt LEFT_SHIFT Z                         &kp X                                &kp C                             &kp V                                    &kp B                         &tap_enter                                &mt RIGHT_PARENTHESIS DOWN_ARROW                &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD     &mt LEFT_SHIFT SLASH
+&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold LS(HOME) BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold LS(END) LS(TAB)      &mt_exit_AML_on_hold LC(LEFT_SHIFT) LEFT_ARROW  &lt_exit_AML_on_hold 1 RIGHT_ARROW                                                   &mt_exit_AML_on_hold LEFT_CONTROL ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP>;
