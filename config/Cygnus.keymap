@@ -589,7 +589,7 @@
 
         default_layer {
             bindings = <
-&mt Q TAB                                &mt LS(W) W                          &mt LS(E) E                       &mt LS(R) R                              &mt LS(T) T                                                                                                                      &mt LS(Y) Y                         &mt LS(U) U  &mt LS(I) I          &mt LS(O) O         &mt LS(P) P
+&mt LS(Q) Q                              &mt LS(W) W                          &mt LS(E) E                       &mt LS(R) R                              &mt LS(T) T                                                                                                                      &mt LS(Y) Y                         &mt LS(U) U  &mt LS(I) I          &mt LS(O) O         &mt LS(P) P
 &mt LS(A) A                              &mt LS(S) S                          &mt LS(D) D                       &mt LS(F) F                              &mt LS(G) G                   &mt LG(LS(S)) ESCAPE                           &mt LEFT_PARENTHESIS UP_ARROW                       &mt LS(H) H                         &mt LS(J) J  &mt LS(K) K          &mt LS(L) L         &mt LS(MINUS) MINUS
 &mt LEFT_SHIFT Z                         &mt LS(X) X                          &mt LS(C) C                       &mt LS(V) V                              &mt LS(B) B                   &tap_enter                                     &mt RIGHT_PARENTHESIS DOWN_ARROW                    &mt LS(N) N                         &mt LS(M) M  &mt LS(COMMA) COMMA  &mt LS(DOT) PERIOD  &mt LEFT_SHIFT SLASH
 &mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold LS(HOME) BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold LS(END) LS(CAPSLOCK)      &mt_exit_AML_on_hold LC(LS(LEFT_ARROW)) LEFT_ARROW  &lt_exit_AML_on_hold 1 RIGHT_ARROW                                                        &mt_exit_AML_on_hold LEFT_CONTROL ENTER
@@ -600,10 +600,10 @@
 
         MOUSE_NUM {
             bindings = <
-&mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &mt F12 KP_MULTIPLY                                                       &ht_colum_cut_minus 0 0  &mkp LCLK                        &msc SCRL_LEFT  &msc SCRL_RIGHT  &tap_rclk
-&mt LG(E) TAB                    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &mt KP_MINUS KP_PLUS  &trans                          &trans              &window_hold             &ht_shiftclick_controlclick 0 0  &kp LC(LS(V))   &kp LC(V)        &mt LC(NUMBER_1) F4
-&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &mt COMMA KP_DOT      &ht_calculation_on_off 0 0      &trans              &ht_colum_copy_plus 0 0  &tap_equal                       &tap_paste      &tap_round       &tap_look
-&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LA(LEFT_ARROW)  &lt 2 F14             &kp LA(RIGHT_ARROW)             &tap_row_cut_minus  &tap_row_copy_plus                                                                         &mt LEFT_CONTROL LA(TAB)
+&mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &mt F12 KP_MULTIPLY                                                       &ht_colum_cut_minus 0 0  &mkp LCLK                        &msc SCRL_LEFT       &msc SCRL_RIGHT  &tap_rclk
+&mt LG(E) TAB                    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &mt KP_MINUS KP_PLUS  &trans                          &trans              &window_hold             &ht_shiftclick_controlclick 0 0  &kp LC(LS(V))        &tap_paste       &tap_equal
+&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &mt COMMA KP_DOT      &ht_calculation_on_off 0 0      &trans              &ht_colum_copy_plus 0 0  &control_click                   &mt LC(NUMBER_1) F4  &tap_round       &tap_look
+&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LA(LEFT_ARROW)  &lt 2 F14             &kp LA(RIGHT_ARROW)             &tap_row_cut_minus  &tap_row_copy_plus                                                                              &mt LEFT_CONTROL LA(TAB)
             >;
         };
 
