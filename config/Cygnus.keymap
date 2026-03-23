@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 60
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -11,8 +11,8 @@
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <200>;
-    tapping-term-ms = <300>;
+    quick-tap-ms = <250>;
+    tapping-term-ms = <400>;
 };
 
 / {
