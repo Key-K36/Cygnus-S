@@ -464,7 +464,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&kp LC(PAGE_UP)>,
+                <&mt LC(SPACE) LC(PAGE_UP)>,
                 <&row_cut>,
                 <&row_minus>,
                 <&kp LA(LS(LEFT_ARROW))>;
@@ -529,32 +529,6 @@
             tapping-term-ms = <250>;
             label = "TAP_ROUND";
         };
-
-        tap_colum_copy_plus: tap_colum_copy_plus {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings =
-                <&mt LC(SPACE) LC(LS(TAB))>,
-                <&colum_copy>,
-                <&colum_plus>,
-                <&kp LA(LS(RIGHT_ARROW))>;
-
-            tapping-term-ms = <250>;
-            label = "TAP_COLUM_COPY_PLUS";
-        };
-
-        tap_colum_cut_minus: tap_colum_cut_minus {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings =
-                <&kp LC(TAB)>,
-                <&colum_cut>,
-                <&colum_minus>,
-                <&kp LA(LS(LEFT_ARROW))>;
-
-            tapping-term-ms = <250>;
-            label = "TAP_COLUM_CUT_MINUS";
-        };
     };
 
     keymap {
@@ -573,10 +547,10 @@
 
         MOUSE_NUM {
             bindings = <
-&mt F9 KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &mt F12 KP_MULTIPLY                                                       &tap_colum_cut_minus  &shift_click    &mt LC(V) LC(LS(V))  &tap_paste       &tap_rclk
-&mt LC(NUMBER_1) TAB             &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &mt KP_MINUS KP_PLUS  &trans                          &trans              &window_hold          &mkp LCLK       &msc SCRL_LEFT       &msc SCRL_RIGHT  &tap_equal
-&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &mt COMMA KP_DOT      &ht_calculation_on_off 0 0      &trans              &tap_colum_copy_plus  &control_click  &mt LG(E) F4         &tap_round       &tap_look
-&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LA(LEFT_ARROW)  &mt LEFT_ALT SPACE    &lt 2 LA(RIGHT_ARROW)           &tap_row_cut_minus  &tap_row_copy_plus                                                          &mt LEFT_CONTROL LA(TAB)
+&mt LC(NUMBER_1) TAB             &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &mt KP_MULTIPLY KP_DIVIDE                                                      &kp LG(E)           &shift_click    &mt LC(V) LC(LS(V))  &tap_paste       &tap_rclk
+&mt F12 F9                       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6       &mt KP_MINUS KP_PLUS       &trans                          &trans              &window_hold        &mkp LCLK       &msc SCRL_LEFT       &msc SCRL_RIGHT  &tap_equal
+&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3       &mt COMMA KP_DOT           &ht_calculation_on_off 0 0      &trans              &kp F4              &control_click  &trans               &tap_round       &tap_look
+&mt LC(LEFT_SHIFT) LC(C)         &trans           &trans           &lt 4 LA(LEFT_ARROW)  &mt LEFT_ALT SPACE         &lt 2 LA(RIGHT_ARROW)           &tap_row_cut_minus  &tap_row_copy_plus                                                        &mt LC(Z) LA(TAB)
             >;
         };
 
