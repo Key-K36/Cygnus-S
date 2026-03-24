@@ -547,15 +547,15 @@
 &mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT TAB  &mt_exit_AML_on_hold HOME BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold END LS(TAB)      &mt_exit_AML_on_hold F2 LEFT_ARROW                 &lt_exit_AML_on_hold 1 RIGHT_ARROW                                                   &mt_exit_AML_on_hold LEFT_CONTROL ENTER
             >;
 
-            sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
         };
 
         MOUSE_NUM {
             bindings = <
-&mt F9 KP_DIVIDE                           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                        &mt F12 KP_MULTIPLY                                                                                &ht_calculation_on_off 0 0  &mkp LCLK       &mt_exit_AML_on_hold LC(V) LC(LS(V))  &tap_paste       &tap_rclk
+&mt LC(NUMBER_1) KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                        &mt F9 KP_MULTIPLY                                                                                 &ht_calculation_on_off 0 0  &mkp LCLK       &mt_exit_AML_on_hold LC(V) LC(LS(V))  &tap_paste       &tap_rclk
 &mt LC(KP_MINUS) KP_MINUS                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                        &mt LC(KP_PLUS) KP_PLUS            &trans                                      &trans              &window_hold                &shift_click    &msc SCRL_LEFT                        &msc SCRL_RIGHT  &mt LA(F4) F4
 &ht_doublezero_kp 0 KP_NUMBER_0            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                        &mt_exit_AML_on_hold COMMA KP_DOT  &tap_equal                                  &trans              &sheet_delete               &control_click  &trans                                &tap_round       &tap_look
-&mt_exit_AML_on_hold LC(LEFT_SHIFT) LC(C)  &kp LG(E)        &trans           &lt_exit_AML_on_hold 4 LA(LEFT_ARROW)  &kp SPACE                          &lt_exit_AML_on_hold 2 LA(RIGHT_ARROW)      &tap_row_cut_minus  &tap_row_copy_plus                                                                                 &mt_exit_AML_on_hold LC(Z) LA(TAB)
+&mt_exit_AML_on_hold LC(LEFT_SHIFT) LC(C)  &kp LG(E)        &trans           &lt_exit_AML_on_hold 4 LA(LEFT_ARROW)  &mt F12 SPACE                      &lt_exit_AML_on_hold 2 LA(RIGHT_ARROW)      &tap_row_cut_minus  &tap_row_copy_plus                                                                                 &mt_exit_AML_on_hold LC(Z) LA(TAB)
             >;
         };
 
