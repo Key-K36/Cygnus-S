@@ -337,6 +337,21 @@
             bindings = <&kp EQUAL &kp S &kp U &kp M &kp P &kp R &kp O &kp D &kp U &kp C &kp T &kp LPAR>;
             label = "SUMPRODUCT";
         };
+
+        alt_tab_swapper: alt_tab_swapper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "ALT_TAB_SWAPPER";
+        };
     };
 
     behaviors {
@@ -499,6 +514,16 @@
             tapping-term-ms = <250>;
             label = "TAP_ROUND";
         };
+
+        q_tab_morph: q_tab_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Q_TAB_MORPH";
+            bindings = <&kp Q>, <&alt_tab_swapper>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     keymap {
@@ -506,7 +531,7 @@
 
         default_layer {
             bindings = <
-&kp Q                                    &kp W                                &kp E                             &kp R                                    &kp T                                                                                                                      &kp Y                               &kp U  &mt TILDE I          &mt LEFT_BRACKET O   &mt BACKSLASH P
+&q_tab_morph                             &kp W                                &kp E                             &kp R                                    &kp T                                                                                                                      &kp Y                               &kp U  &mt TILDE I          &mt LEFT_BRACKET O   &mt BACKSLASH P
 &kp A                                    &kp S                                &kp D                             &kp F                                    &kp G                         &mt LG(LS(S)) ESCAPE                      &mt_exit_AML_on_hold LEFT_PARENTHESIS UP_ARROW     &kp H                               &kp J  &mt AT_SIGN K        &mt RIGHT_BRACKET L  &mt LS(MINUS) MINUS
 &mt_exit_AML_on_hold LEFT_SHIFT Z        &kp X                                &kp C                             &kp V                                    &kp B                         &tap_enter                                &mt_exit_AML_on_hold RIGHT_PARENTHESIS DOWN_ARROW  &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD     &mt_exit_AML_on_hold LEFT_SHIFT SLASH
 &mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold LS(HOME) BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold LS(END) LS(TAB)      &mt_exit_AML_on_hold LC(LEFT_SHIFT) LEFT_ARROW     &lt_exit_AML_on_hold 1 RIGHT_ARROW                                                   &mt_exit_AML_on_hold LEFT_CONTROL ENTER
