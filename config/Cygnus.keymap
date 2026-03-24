@@ -531,10 +531,10 @@
 
         default_layer {
             bindings = <
-&q_tab_morph                             &kp W                                &kp E                             &kp R                                    &kp T                                                                                                                      &kp Y                               &kp U  &mt TILDE I          &mt LEFT_BRACKET O   &mt BACKSLASH P
-&kp A                                    &kp S                                &kp D                             &kp F                                    &kp G                         &mt LG(LS(S)) ESCAPE                      &mt_exit_AML_on_hold LEFT_PARENTHESIS UP_ARROW     &kp H                               &kp J  &mt AT_SIGN K        &mt RIGHT_BRACKET L  &mt LS(MINUS) MINUS
-&mt_exit_AML_on_hold LEFT_SHIFT Z        &kp X                                &kp C                             &kp V                                    &kp B                         &tap_enter                                &mt_exit_AML_on_hold RIGHT_PARENTHESIS DOWN_ARROW  &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD     &mt_exit_AML_on_hold LEFT_SHIFT SLASH
-&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold LS(HOME) BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold LS(END) LS(TAB)      &mt_exit_AML_on_hold LC(LEFT_SHIFT) LEFT_ARROW     &lt_exit_AML_on_hold 1 RIGHT_ARROW                                                   &mt_exit_AML_on_hold LEFT_CONTROL ENTER
+&q_tab_morph                             &kp W                                &kp E                             &kp R                                &kp T                                                                                                                  &kp Y                               &kp U  &mt TILDE I          &mt LEFT_BRACKET O   &mt BACKSLASH P
+&kp A                                    &kp S                                &kp D                             &kp F                                &kp G                         &mt LG(LS(S)) ESCAPE                  &mt_exit_AML_on_hold LEFT_PARENTHESIS UP_ARROW     &kp H                               &kp J  &mt AT_SIGN K        &mt RIGHT_BRACKET L  &mt LS(MINUS) MINUS
+&mt_exit_AML_on_hold LEFT_SHIFT Z        &kp X                                &kp C                             &kp V                                &kp B                         &tap_enter                            &mt_exit_AML_on_hold RIGHT_PARENTHESIS DOWN_ARROW  &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD     &mt_exit_AML_on_hold LEFT_SHIFT SLASH
+&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold HOME BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold END LS(TAB)      &mt_exit_AML_on_hold LC(LEFT_SHIFT) LEFT_ARROW     &lt_exit_AML_on_hold 1 RIGHT_ARROW                                                   &mt_exit_AML_on_hold LEFT_CONTROL ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_DOWN K_VOLUME_UP>;
@@ -542,19 +542,19 @@
 
         MOUSE_NUM {
             bindings = <
-&mt LC(NUMBER_1) TAB                       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                        &mt_exit_AML_on_hold KP_MULTIPLY KP_DIVIDE                                                                  &kp LG(E)           &shift_click    &mt_exit_AML_on_hold LC(V) LC(LS(V))  &tap_paste       &tap_rclk
-&mt F12 F9                                 &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                        &mt_exit_AML_on_hold KP_MINUS KP_PLUS       &trans                                      &trans              &window_hold        &mkp LCLK       &msc SCRL_LEFT                        &msc SCRL_RIGHT  &tap_equal
-&ht_doublezero_kp 0 KP_NUMBER_0            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                        &mt_exit_AML_on_hold COMMA KP_DOT           &ht_calculation_on_off 0 0                  &trans              &kp F4              &control_click  &trans                                &tap_round       &tap_look
-&mt_exit_AML_on_hold LC(LEFT_SHIFT) LC(C)  &trans           &trans           &lt_exit_AML_on_hold 4 LA(LEFT_ARROW)  &mt_exit_AML_on_hold LEFT_ALT SPACE         &lt_exit_AML_on_hold 2 LA(RIGHT_ARROW)      &tap_row_cut_minus  &tap_row_copy_plus                                                                         &mt_exit_AML_on_hold LC(Z) LA(TAB)
+&mt F9 KP_DIVIDE                           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                        &mt F12 KP_MULTIPLY                                                                                &kp LG(E)                   &shift_click    &msc SCRL_LEFT       &msc SCRL_RIGHT  &tap_rclk
+&mt LC(KP_MINUS) KP_MINUS                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                        &mt LC(KP_PLUS) KP_PLUS            &trans                                      &trans              &window_hold                &mkp LCLK       &mt LC(V) LC(LS(V))  &tap_paste       &mt LA(F4) F4
+&ht_doublezero_kp 0 KP_NUMBER_0            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                        &mt_exit_AML_on_hold COMMA KP_DOT  &tap_equal                                  &trans              &ht_calculation_on_off 0 0  &control_click  &trans               &tap_round       &tap_look
+&mt_exit_AML_on_hold LC(LEFT_SHIFT) LC(C)  &trans           &trans           &lt_exit_AML_on_hold 4 LA(LEFT_ARROW)  &kp SPACE                          &lt_exit_AML_on_hold 2 LA(RIGHT_ARROW)      &tap_row_cut_minus  &tap_row_copy_plus                                                                &mt_exit_AML_on_hold LC(Z) LA(TAB)
             >;
         };
 
         SYMBOL {
             bindings = <
-&trans  &mt LG(NUMBER_7) APOSTROPHE   &mt LG(NUMBER_8) LEFT_PARENTHESIS  &mt LG(NUMBER_9) RIGHT_PARENTHESIS  &trans                      &trans                        &trans  &trans  &trans  &trans
-&trans  &mt LG(NUMBER_4) DOLLAR       &mt LG(NUMBER_5) PERCENT           &mt LG(NUMBER_6) AMPERSAND          &trans  &trans      &trans  &trans                        &trans  &trans  &trans  &trans
-&trans  &mt LG(NUMBER_1) EXCLAMATION  &mt LG(NUMBER_2) DOUBLE_QUOTES     &mt LG(NUMBER_3) POUND              &trans  &trans      &trans  &mt LC(KP_MINUS) LC(KP_PLUS)  &trans  &trans  &trans  &trans
-&trans  &trans                        &trans                             &trans                              &trans  &trans      &trans  &trans                                                &trans
+&trans  &mt LG(NUMBER_7) APOSTROPHE   &mt LG(NUMBER_8) LEFT_PARENTHESIS  &mt LG(NUMBER_9) RIGHT_PARENTHESIS  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &mt LG(NUMBER_4) DOLLAR       &mt LG(NUMBER_5) PERCENT           &mt LG(NUMBER_6) AMPERSAND          &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mt LG(NUMBER_1) EXCLAMATION  &mt LG(NUMBER_2) DOUBLE_QUOTES     &mt LG(NUMBER_3) POUND              &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                        &trans                             &trans                              &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
