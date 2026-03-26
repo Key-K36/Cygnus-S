@@ -156,6 +156,21 @@
             label = "CONTOLOR_CLICK";
         };
 
+        alt_tab_swapper: alt_tab_swapper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "ALT_TAB_SWAPPER";
+        };
+
         remove_duplicates: choufuku {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -282,6 +297,13 @@
             label = "NAME_CHANGE";
         };
 
+        sheet_delete: seet_delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp L &kp ENTER>;
+            label = "SEET_DELETE";
+        };
+
         vlookup: vlookup {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -338,27 +360,6 @@
             label = "SUMPRODUCT";
         };
 
-        alt_tab_swapper: alt_tab_swapper {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp LEFT_ALT>;
-
-            label = "ALT_TAB_SWAPPER";
-        };
-
-        sheet_delete: seet_delete {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp L &kp ENTER>;
-            label = "SEET_DELETE";
-        };
     };
 
     behaviors {
@@ -439,42 +440,14 @@
             label = "HT_DOUBLEZERO_KP";
         };
 
-        tap_row_copy_plus: tap_row_copy_plus {
-            compatible = "zmk,behavior-tap-dance";
+        q_tab_morph: q_tab_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Q_TAB_MORPH";
+            bindings = <&kp Q>, <&alt_tab_swapper>;
+
             #binding-cells = <0>;
-            bindings =
-                <&mt_exit_AML_on_hold LS(SPACE) LC(PAGE_DOWN)>,
-                <&row_copy>,
-                <&row_plus>,
-                <&kp LA(LS(RIGHT_ARROW))>;
-
-            tapping-term-ms = <250>;
-            label = "TAP_ROW_COPY_PLUS";
-        };
-
-        tap_row_cut_minus: tap_row_cut_minus {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings =
-                <&mt_exit_AML_on_hold LC(SPACE) LC(PAGE_UP)>,
-                <&row_cut>,
-                <&row_minus>,
-                <&kp LA(LS(LEFT_ARROW))>;
-
-            tapping-term-ms = <250>;
-            label = "TAP_ROW_CUT_MINUS";
-        };
-
-        tap_paste2: tap_paste2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings =
-                <&mt_exit_AML_on_hold LA(TAB) LC(V)>,
-                <&transpose_and_paste>,
-                <&paste_memo_only>;
-
-            tapping-term-ms = <250>;
-            label = "TAP_PASTE2";
+            mods = <(MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LALT|MOD_RALT)>;
         };
 
         tap_rclk: tap_rclk {
@@ -507,6 +480,29 @@
             label = "TAP_EQUAL";
         };
 
+        tap_paste1: tap_paste1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings =
+                <&mt_exit_AML_on_hold LC(Z) LC(LS(V))>,
+                <&paste_formulas_only>;
+
+            tapping-term-ms = <250>;
+            label = "TAP_PASTE1";
+        };
+
+        tap_paste2: tap_paste2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings =
+                <&mt_exit_AML_on_hold LA(TAB) LC(V)>,
+                <&transpose_and_paste>,
+                <&paste_memo_only>;
+
+            tapping-term-ms = <250>;
+            label = "TAP_PASTE2";
+        };
+
         tap_look: tap_look {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -525,14 +521,30 @@
             label = "TAP_ROUND";
         };
 
-        q_tab_morph: q_tab_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "Q_TAB_MORPH";
-            bindings = <&kp Q>, <&alt_tab_swapper>;
-
+        tap_row_copy_plus: tap_row_copy_plus {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
-            keep-mods = <(MOD_LALT|MOD_RALT)>;
+            bindings =
+                <&mt_exit_AML_on_hold LS(SPACE) LC(PAGE_DOWN)>,
+                <&row_copy>,
+                <&row_plus>,
+                <&kp LA(LS(RIGHT_ARROW))>;
+
+            tapping-term-ms = <250>;
+            label = "TAP_ROW_COPY_PLUS";
+        };
+
+        tap_row_cut_minus: tap_row_cut_minus {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings =
+                <&mt_exit_AML_on_hold LC(SPACE) LC(PAGE_UP)>,
+                <&row_cut>,
+                <&row_minus>,
+                <&kp LA(LS(LEFT_ARROW))>;
+
+            tapping-term-ms = <250>;
+            label = "TAP_ROW_CUT_MINUS";
         };
 
         tap_colum_copy_plus: tap_colum_copy_plus {
@@ -561,16 +573,6 @@
             label = "TAP_COLUM_CUT_MINUS";
         };
 
-        tap_paste1: tap_paste1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings =
-                <&mt_exit_AML_on_hold LC(Z) LC(LS(V))>,
-                <&paste_formulas_only>;
-
-            tapping-term-ms = <250>;
-            label = "TAP_PASTE1";
-        };
     };
 
     keymap {
