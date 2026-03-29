@@ -286,7 +286,7 @@
         colum_cut: colum_cut {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &kp LC(C)>;
+            bindings = <&kp LC(SPACE) &kp LC(X)>;
             label = "COLUM_CUT";
         };
 
