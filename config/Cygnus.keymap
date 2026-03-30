@@ -612,10 +612,10 @@
 
         MOUSE_NUM {
             bindings = <
-&mt LC(NUMBER_1) KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                     &mt LC(LS(L)) KP_MULTIPLY                                                              &control_click                &mkp LCLK                    &tap_paste1      &tap_paste2                 &tap_rclk
-&mt LC(KP_MINUS) KP_MINUS                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                     &mt LC(KP_PLUS) KP_PLUS               &trans                     &tap_colum_cut_minus  &window_hold                  &ht_shiftclick_kp 0 LA(TAB)  &mt LC(A) F4     &mt LC(S) F9                &tap_look
-&ht_doublezero_kp 0 KP_NUMBER_0            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                     &mt_exit_AML_on_hold COMMA KP_DOT     &tap_equal                 &tap_colum_copy_plus  &ht_sort_kp 0 LA(LEFT_ARROW)  &merging_cells               &mt LC(B) COMMA  &ht_calculation_on_off 0 0  &tap_round
-&mt_exit_AML_on_hold LC(LEFT_SHIFT) LC(C)  &trans           &trans           &lt_exit_AML_on_hold 4 LC(PAGE_UP)  &lt_exit_AML_on_hold 2 LC(LS(SPACE))  &mt F12 LC(PAGE_DOWN)      &tap_row_cut_minus    &tap_row_copy_plus                                                                                      &trans
+&mt LC(NUMBER_1) KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                     &mt LC(LS(L)) KP_MULTIPLY                                                              &control_click      &mkp LCLK                     &tap_paste1      &tap_paste2                 &tap_rclk
+&mt LC(KP_MINUS) KP_MINUS                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                     &mt LC(KP_PLUS) KP_PLUS               &trans                     &tap_colum_cut_minus  &window_hold        &ht_shiftclick_kp 0 LA(TAB)   &mt LC(A) F4     &mt LC(S) F9                &tap_look
+&ht_doublezero_kp 0 KP_NUMBER_0            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                     &mt_exit_AML_on_hold COMMA KP_DOT     &tap_equal                 &tap_colum_copy_plus  &merging_cells      &ht_sort_kp 0 LA(LEFT_ARROW)  &mt LC(B) COMMA  &ht_calculation_on_off 0 0  &tap_round
+&mt_exit_AML_on_hold LC(LEFT_SHIFT) LC(C)  &trans           &trans           &lt_exit_AML_on_hold 4 LC(PAGE_UP)  &lt_exit_AML_on_hold 2 LC(LS(SPACE))  &mt F12 LC(PAGE_DOWN)      &tap_row_cut_minus    &tap_row_copy_plus                                                                             &trans
             >;
         };
 
