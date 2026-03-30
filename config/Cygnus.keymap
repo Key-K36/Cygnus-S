@@ -359,6 +359,13 @@
             bindings = <&kp EQUAL &kp S &kp U &kp M &kp P &kp R &kp O &kp D &kp U &kp C &kp T &kp LPAR>;
             label = "SUMPRODUCT";
         };
+
+        sort: transe_row_colum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(D) &kp S>;
+            label = "TRANSE_ROW_COLUM";
+        };
     };
 
     behaviors {
@@ -582,6 +589,17 @@
             flavor = "balanced";
             label = "HT_SHIFTCLICK_KP";
         };
+
+        ht_sort_kp: ht_sort_kp {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&sort>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            label = "HT_SORT_KP";
+        };
     };
 
     keymap {
@@ -600,10 +618,10 @@
 
         MOUSE_NUM {
             bindings = <
-&mt LC(NUMBER_1) KP_DIVIDE       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                     &mt F12 KP_MULTIPLY                                                                   &mt_exit_AML_on_hold F9 F2  &mkp LCLK                           &tap_paste1                             &tap_paste2                 &tap_rclk
-&mt LC(KP_MINUS) KP_MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                     &mt LC(KP_PLUS) KP_PLUS            &trans                       &tap_colum_cut_minus  &window_hold                &ht_shiftclick_kp 0 LA(LEFT_ARROW)  &mt_exit_AML_on_hold LC(LS(L)) LA(TAB)  &mt LA(F4) F4               &tap_look
-&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                     &mt_exit_AML_on_hold COMMA KP_DOT  &tap_equal                   &tap_colum_copy_plus  &sheet_delete               &control_click                      &trans                                  &ht_calculation_on_off 0 0  &tap_round
-&trans                           &trans           &trans           &lt_exit_AML_on_hold 4 LC(PAGE_UP)  &lt_exit_AML_on_hold 2 TAB         &mt LC(A) LC(PAGE_DOWN)      &tap_row_cut_minus    &tap_row_copy_plus                                                                                                                  &mt_exit_AML_on_hold LC(LEFT_SHIFT) ENTER
+&mt LC(NUMBER_1) KP_DIVIDE       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                     &mt LC(LS(L)) KP_MULTIPLY                                                               &mt F12 F2          &mkp LCLK                           &tap_paste1                         &tap_paste2                 &tap_rclk
+&mt LC(KP_MINUS) KP_MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                     &mt LC(KP_PLUS) KP_PLUS            &trans                         &tap_colum_cut_minus  &window_hold        &ht_shiftclick_kp 0 LA(LEFT_ARROW)  &mt_exit_AML_on_hold LC(A) LA(TAB)  &mt LC(S) F9                &tap_look
+&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                     &mt_exit_AML_on_hold COMMA KP_DOT  &tap_equal                     &tap_colum_copy_plus  &sheet_delete       &control_click                      &mt F4 COMMA                        &ht_calculation_on_off 0 0  &tap_round
+&trans                           &trans           &trans           &lt_exit_AML_on_hold 4 LC(PAGE_UP)  &lt_exit_AML_on_hold 2 TAB         &ht_sort_kp 0 LC(PAGE_UP)      &tap_row_cut_minus    &tap_row_copy_plus                                                                                                      &mt_exit_AML_on_hold LC(LEFT_SHIFT) ENTER
             >;
         };
 
