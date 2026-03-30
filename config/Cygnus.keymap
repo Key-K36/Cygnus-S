@@ -60,6 +60,18 @@
             key-positions = <19 20>;
             layers = <1 4>;
         };
+
+        scrl_right {
+            bindings = <&msc SCRL_RIGHT>;
+            key-positions = <20 21>;
+            layers = <1 4>;
+        };
+
+        scrl_left {
+            bindings = <&msc SCRL_LEFT>;
+            key-positions = <19 18>;
+            layers = <1 4>;
+        };
     };
 
     macros {
