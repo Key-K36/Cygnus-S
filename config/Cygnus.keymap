@@ -171,6 +171,13 @@
             label = "ALT_TAB_SWAPPER";
         };
 
+        sort: transe_row_colum {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(D) &kp S>;
+            label = "TRANSE_ROW_COLUM";
+        };
+
         remove_duplicates: choufuku {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -360,12 +367,6 @@
             label = "SUMPRODUCT";
         };
 
-        sort: transe_row_colum {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(D) &kp S>;
-            label = "TRANSE_ROW_COLUM";
-        };
     };
 
     behaviors {
@@ -422,6 +423,28 @@
             flavor = "balanced";
             quick-tap-ms = <200>;
             label = "MT_EXIT_AML_ON_HOLD";
+        };
+
+        ht_shiftclick_kp: ht_shiftclick_kp {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&shift_click>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            label = "HT_SHIFTCLICK_KP";
+        };
+
+        ht_sort_kp: ht_sort_kp {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&sort>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            label = "HT_SORT_KP";
         };
 
         ht_calculation_on_off: ht_calculation_on_off {
@@ -579,27 +602,6 @@
             label = "TAP_COLUM_CUT_MINUS";
         };
 
-        ht_shiftclick_kp: ht_shiftclick_kp {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&shift_click>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-            label = "HT_SHIFTCLICK_KP";
-        };
-
-        ht_sort_kp: ht_sort_kp {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&sort>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-            label = "HT_SORT_KP";
-        };
     };
 
     keymap {
