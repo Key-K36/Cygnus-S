@@ -432,7 +432,7 @@
 
         ht_shiftclick_kp: ht_shiftclick_kp {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&shift_click>, <&kp>;
+            bindings = <&shift_click>, <&alt_tab_swapper>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
