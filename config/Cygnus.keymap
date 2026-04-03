@@ -44,7 +44,7 @@
         };
 
         num_numlock {
-            bindings = <&mt KP_NUMLOCK LS(TAB)>;
+            bindings = <&mt KP_NUMLOCK TAB>;
             key-positions = <1 0>;
             layers = <1>;
         };
@@ -432,7 +432,7 @@
 
         ht_shiftclick_kp: ht_shiftclick_kp {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&shift_click>, <&alt_tab_swapper>;
+            bindings = <&shift_click>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -559,7 +559,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&mt_exit_AML_on_hold LS(SPACE) RIGHT_ARROW>,
+                <&mt_exit_AML_on_hold LS(SPACE) LS(TAB)>,
                 <&row_copy>,
                 <&row_plus>,
                 <&kp LA(LS(RIGHT_ARROW))>;
@@ -613,10 +613,10 @@
 
         default_layer {
             bindings = <
-&q_tab_morph                             &kp W                                &kp E                                  &kp R                                    &kp T                                                                                                                 &kp Y                               &kp U  &mt TILDE I          &mt LEFT_BRACKET O   &mt BACKSLASH P
-&kp A                                    &kp S                                &kp D                                  &kp F                                    &kp G                         &mt LG(LS(S)) ESCAPE                 &mt_exit_AML_on_hold LEFT_PARENTHESIS UP_ARROW     &kp H                               &kp J  &mt AT_SIGN K        &mt RIGHT_BRACKET L  &mt LS(MINUS) MINUS
-&mt_exit_AML_on_hold LEFT_SHIFT Z        &kp X                                &kp C                                  &kp V                                    &kp B                         &tap_enter                           &mt_exit_AML_on_hold RIGHT_PARENTHESIS DOWN_ARROW  &kp N                               &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD     &mt_exit_AML_on_hold LEFT_SHIFT SLASH
-&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT LS(TAB)  &mt_exit_AML_on_hold LS(HOME) BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold LS(END) F2      &mt_exit_AML_on_hold LC(LEFT_SHIFT) LEFT_ARROW     &lt_exit_AML_on_hold 1 RIGHT_ARROW                                                   &mt_exit_AML_on_hold LEFT_CONTROL ENTER
+&q_tab_morph                             &kp W                                &kp E                             &kp R                                    &kp T                                                                                                                                      &kp Y                           &kp U  &mt TILDE I          &mt LEFT_BRACKET O   &mt BACKSLASH P
+&kp A                                    &kp S                                &kp D                             &kp F                                    &kp G                         &mt LG(LS(S)) ESCAPE                                         &kp UP_ARROW                                    &kp H                           &kp J  &mt AT_SIGN K        &mt RIGHT_BRACKET L  &mt LS(MINUS) MINUS
+&mt_exit_AML_on_hold LEFT_SHIFT Z        &kp X                                &kp C                             &kp V                                    &kp B                         &mt_exit_AML_on_hold RIGHT_PARENTHESIS LEFT_PARENTHESIS      &kp DOWN_ARROW                                  &kp N                           &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD     &mt_exit_AML_on_hold LEFT_SHIFT SLASH
+&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold LS(HOME) BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold LS(END) RIGHT_ARROW                     &mt_exit_AML_on_hold LC(LEFT_SHIFT) LEFT_ARROW  &lt_exit_AML_on_hold 1 LS(TAB)                                                   &mt_exit_AML_on_hold LEFT_CONTROL ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -624,10 +624,10 @@
 
         MOUSE_NUM {
             bindings = <
-&mt LC(NUMBER_1) KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                     &mt LC(LS(L)) KP_MULTIPLY                                                              &merging_cells      &mkp LCLK                          &tap_paste1      &tap_paste2                 &tap_rclk
-&mt LC(KP_MINUS) KP_MINUS                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                     &mt LC(KP_PLUS) KP_PLUS               &trans                     &tap_colum_cut_minus  &window_hold        &ht_shiftclick_kp 0 LA(TAB)        &mt LC(A) F4     &mt LC(S) F9                &tap_look
-&ht_doublezero_kp 0 KP_NUMBER_0            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                     &mt_exit_AML_on_hold COMMA KP_DOT     &tap_equal                 &tap_colum_copy_plus  &sort               &ht_ctrlclick_kp 0 LA(LEFT_ARROW)  &mt LC(B) COMMA  &ht_calculation_on_off 0 0  &tap_round
-&mt_exit_AML_on_hold LC(LEFT_SHIFT) LC(C)  &trans           &trans           &lt_exit_AML_on_hold 4 LC(PAGE_UP)  &lt_exit_AML_on_hold 2 LC(LS(SPACE))  &mt F12 LC(PAGE_DOWN)      &tap_row_cut_minus    &tap_row_copy_plus                                                                                  &mt_exit_AML_on_hold LC(LEFT_SHIFT) ENTER
+&mt LC(NUMBER_1) KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9               &mt LC(LS(L)) KP_MULTIPLY                                                         &merging_cells      &mkp LCLK                    &tap_paste1                                      &tap_paste2                                         &tap_rclk
+&mt LC(KP_MINUS) KP_MINUS                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6               &mt LC(KP_PLUS) KP_PLUS            &trans                   &tap_colum_cut_minus  &window_hold        &ht_shiftclick_kp 0 LA(TAB)  &mt_exit_AML_on_hold LA(LEFT_ARROW) LC(PAGE_UP)  &mt_exit_AML_on_hold LA(RIGHT_ARROW) LC(PAGE_DOWN)  &tap_look
+&ht_doublezero_kp 0 KP_NUMBER_0            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3               &mt_exit_AML_on_hold LC(B) KP_DOT  &tap_equal               &tap_colum_copy_plus  &sort               &ht_ctrlclick_kp 0 LC(S)     &mt F9 COMMA                                     &ht_calculation_on_off 0 0                          &tap_round
+&mt_exit_AML_on_hold LC(LEFT_SHIFT) LC(C)  &trans           &trans           &lt_exit_AML_on_hold 4 LC(A)  &lt_exit_AML_on_hold 2 LG(E)       &mt F12 RIGHT_ARROW      &tap_row_cut_minus    &tap_row_copy_plus                                                                                                                                    &tap_enter
             >;
         };
 
