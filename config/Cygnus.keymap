@@ -518,7 +518,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&mt_exit_AML_on_hold LC(X) LC(LS(V))>,
+                <&mt_exit_AML_on_hold LC(Z) LC(LS(V))>,
                 <&paste_formulas_only>;
 
             tapping-term-ms = <250>;
@@ -529,7 +529,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&mt_exit_AML_on_hold LC(Z) LC(V)>,
+                <&mt_exit_AML_on_hold LC(X) LC(V)>,
                 <&transpose_and_paste>,
                 <&paste_memo_only>;
 
@@ -616,7 +616,7 @@
 &q_tab_morph                             &kp W                                &kp E                             &kp R                                    &kp T                                                                                                                                      &kp Y                           &kp U  &mt TILDE I          &mt LEFT_BRACKET O   &mt BACKSLASH P
 &kp A                                    &kp S                                &kp D                             &kp F                                    &kp G                         &mt LG(LS(S)) ESCAPE                                         &kp UP_ARROW                                    &kp H                           &kp J  &mt AT_SIGN K        &mt RIGHT_BRACKET L  &mt LS(MINUS) MINUS
 &mt_exit_AML_on_hold LEFT_SHIFT Z        &kp X                                &kp C                             &kp V                                    &kp B                         &mt_exit_AML_on_hold RIGHT_PARENTHESIS LEFT_PARENTHESIS      &kp DOWN_ARROW                                  &kp N                           &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD     &mt_exit_AML_on_hold LEFT_SHIFT SLASH
-&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(D)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold LS(HOME) BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold LS(END) RIGHT_ARROW                     &mt_exit_AML_on_hold LC(LEFT_SHIFT) LEFT_ARROW  &lt_exit_AML_on_hold 1 LS(TAB)                                                   &mt_exit_AML_on_hold LEFT_CONTROL ENTER
+&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(E)  &mt_exit_AML_on_hold LEFT_ALT F2  &mt_exit_AML_on_hold LS(HOME) BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold LS(END) RIGHT_ARROW                     &mt_exit_AML_on_hold LC(LEFT_SHIFT) LEFT_ARROW  &lt_exit_AML_on_hold 1 LS(TAB)                                                   &mt_exit_AML_on_hold LEFT_CONTROL ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -627,7 +627,7 @@
 &mt LC(NUMBER_1) KP_DIVIDE                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9               &mt LC(LS(L)) KP_MULTIPLY                                                         &merging_cells      &mkp LCLK                        &tap_paste1                                      &tap_paste2                                         &tap_rclk
 &mt LC(KP_MINUS) KP_MINUS                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6               &mt LC(KP_PLUS) KP_PLUS            &trans                   &tap_colum_cut_minus  &window_hold        &ht_shiftclick_alttab 0 LA(TAB)  &mt_exit_AML_on_hold LA(LEFT_ARROW) LC(PAGE_UP)  &mt_exit_AML_on_hold LA(RIGHT_ARROW) LC(PAGE_DOWN)  &tap_look
 &ht_doublezero_kp 0 KP_NUMBER_0            &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3               &mt_exit_AML_on_hold LC(B) KP_DOT  &tap_equal               &tap_colum_copy_plus  &sort               &ht_ctrlclick_kp 0 F9            &mt_exit_AML_on_hold F4 COMMA                    &ht_calculation_on_off 0 0                          &tap_round
-&mt_exit_AML_on_hold LC(LEFT_SHIFT) LC(C)  &trans           &trans           &lt_exit_AML_on_hold 4 LC(A)  &lt_exit_AML_on_hold 2 LG(E)       &mt F12 RIGHT_ARROW      &tap_row_cut_minus    &tap_row_copy_plus                                                                                                                                        &tap_enter
+&mt_exit_AML_on_hold LC(LEFT_SHIFT) LC(C)  &trans           &trans           &lt_exit_AML_on_hold 4 LC(A)  &lt_exit_AML_on_hold 2 LG(D)       &mt F12 RIGHT_ARROW      &tap_row_cut_minus    &tap_row_copy_plus                                                                                                                                        &tap_enter
             >;
         };
 
