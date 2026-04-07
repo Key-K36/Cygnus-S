@@ -520,7 +520,7 @@
         tap_equal: tap_equal {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&lt 6 KP_EQUAL>, <&sum>, <&sumproduct>;
+            bindings = <&lt 6 EQUAL>, <&sum>, <&sumproduct>;
 
             tapping-term-ms = <250>;
             label = "TAP_EQUAL";
