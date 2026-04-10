@@ -589,7 +589,7 @@
         tap_enter: tap_enter {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&mt LA(F4) LS(ENTER)>, <&kp LA(ENTER)>;
+            bindings = <&lt_exit_AML_on_hold 4 LS(ENTER)>, <&kp LA(ENTER)>;
 
             tapping-term-ms = <250>;
             label = "TAP_ENTER";
@@ -648,7 +648,7 @@
             bindings = <
 &mt LC(NUMBER_1) KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                                   &mt ASTERISK KP_MULTIPLY                                                &ht_ctrlclick_shiftclick 0 0  &mkp LCLK                                        &tap_paste1                               &tap_paste2  &tap_rclk
 &mt LC(KP_MINUS) KP_MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6                                   &mt LC(KP_PLUS) KP_PLUS           &trans          &tap_colum_cut_minus  &window_hold                  &mt_exit_AML_on_hold LA(LEFT_ARROW) LC(PAGE_UP)  &tap_calculation                          &tap_look    &mt_exit_AML_on_hold LA(RIGHT_ARROW) LC(PAGE_DOWN)
-&ht_doublezero_kp 0 NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                                   &mt_exit_AML_on_hold LC(B) DOT    &tap_equal      &tap_colum_copy_plus  &sort                         &merging_cells                                   &mt_exit_AML_on_hold DOUBLE_QUOTES COMMA  &tap_round   &lt_exit_AML_on_hold 4 F12
+&ht_doublezero_kp 0 NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                                   &mt_exit_AML_on_hold LC(B) DOT    &tap_equal      &tap_colum_copy_plus  &sort                         &merging_cells                                   &mt_exit_AML_on_hold DOUBLE_QUOTES COMMA  &tap_round   &mt LA(F4) F12
 &lt_exit_AML_on_hold 4 LC(C)  &trans        &trans        &mt_exit_AML_on_hold LC(LEFT_SHIFT) BACKSPACE  &mt_exit_AML_on_hold LC(W) LG(D)  &trans          &tap_row_cut_minus    &tap_row_copy_plus                                                                                                                    &tap_enter
             >;
         };
