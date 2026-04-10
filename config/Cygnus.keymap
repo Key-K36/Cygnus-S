@@ -617,6 +617,17 @@
             tapping-term-ms = <200>;
             label = "TAP_RIGHT_THUMB";
         };
+
+        tap_sapce: tap_sapce {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings =
+                <&lt_exit_AML_on_hold 1 SPACE>,
+                <&lt_exit_AML_on_hold 1 LC(LS(SPACE))>;
+
+            tapping-term-ms = <200>;
+            label = "TAP_SAPCE";
+        };
     };
 
     keymap {
@@ -624,10 +635,10 @@
 
         default_layer {
             bindings = <
-&q_tab_morph                             &kp W                                &kp E                                  &kp R                                      &kp T                                                                                                                                       &kp Y             &kp U  &kp I                &kp O             &kp P
-&kp A                                    &kp S                                &kp D                                  &kp F                                      &kp G                         &mt LG(LS(S)) ESCAPE                                    &mt_exit_AML_on_hold TILDE AT_SIGN                    &kp H             &kp J  &kp K                &kp L             &mt LS(MINUS) MINUS
-&kp Z                                    &kp X                                &kp C                                  &kp V                                      &kp B                         &mt_exit_AML_on_hold LEFT_BRACKET LEFT_PARENTHESIS      &mt_exit_AML_on_hold RIGHT_BRACKET RIGHT_PARENTHESIS  &kp N             &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD  &mt_exit_AML_on_hold LS(SLASH) SLASH
-&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(E)  &mt_exit_AML_on_hold LEFT_ALT LA(TAB)  &mt_exit_AML_on_hold LEFT_SHIFT BACKSPACE  &lt_exit_AML_on_hold 1 SPACE  &mt_exit_AML_on_hold LS(HOME) LEFT_ARROW                &mt_exit_AML_on_hold LS(END) RIGHT_ARROW              &tap_right_thumb                                                &mt_exit_AML_on_hold LEFT_CONTROL ENTER
+&q_tab_morph                             &kp W                                &kp E                                  &kp R                                  &kp T                                                                                                                     &kp Y             &kp U  &kp I                &kp O             &kp P
+&kp A                                    &kp S                                &kp D                                  &kp F                                  &kp G       &mt LG(LS(S)) ESCAPE                                    &mt_exit_AML_on_hold TILDE AT_SIGN                    &kp H             &kp J  &kp K                &kp L             &mt LS(MINUS) MINUS
+&kp Z                                    &kp X                                &kp C                                  &kp V                                  &kp B       &mt_exit_AML_on_hold LEFT_BRACKET LEFT_PARENTHESIS      &mt_exit_AML_on_hold RIGHT_BRACKET RIGHT_PARENTHESIS  &kp N             &kp M  &mt SEMICOLON COMMA  &mt COLON PERIOD  &mt_exit_AML_on_hold LS(SLASH) SLASH
+&mt_exit_AML_on_hold LEFT_CONTROL LC(C)  &mt_exit_AML_on_hold LEFT_WIN LG(E)  &mt_exit_AML_on_hold LEFT_ALT LA(TAB)  &mt_exit_AML_on_hold DELETE BACKSPACE  &tap_sapce  &mt_exit_AML_on_hold LS(END) RIGHT_ARROW                &mt_exit_AML_on_hold LS(HOME) LEFT_ARROW              &tap_right_thumb                                                &mt_exit_AML_on_hold LEFT_SHIFT ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
