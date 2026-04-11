@@ -51,13 +51,13 @@
 
         up {
             bindings = <&mt HOME UP_ARROW>;
-            key-positions = <7 6>;
+            key-positions = <7 8>;
             layers = <0 1 2 4>;
         };
 
         down {
             bindings = <&mt END DOWN_ARROW>;
-            key-positions = <19 18>;
+            key-positions = <19 20>;
             layers = <0 1 2 4>;
         };
     };
