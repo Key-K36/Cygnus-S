@@ -600,7 +600,7 @@
             #binding-cells = <0>;
             bindings = <&lt_exit_AML_on_hold 4 LS(ENTER)>, <&mt F12 LA(ENTER)>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             label = "TAP_ENTER";
         };
 
@@ -608,10 +608,10 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&lt_exit_AML_on_hold 1 LS(TAB)>,
+                <&mt_exit_AML_on_hold LEFT_SHIFT LS(TAB)>,
                 <&lt_exit_AML_on_hold 2 F2>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             label = "TAP_RIGHT_THUMB";
         };
     };
