@@ -611,7 +611,7 @@
                 <&lt_exit_AML_on_hold 1 LS(TAB)>,
                 <&mt_exit_AML_on_hold LEFT_SHIFT F2>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             label = "TAP_RIGHT_THUMB";
         };
     };
