@@ -608,8 +608,8 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&mt_exit_AML_on_hold LEFT_SHIFT LS(TAB)>,
-                <&lt_exit_AML_on_hold 2 F2>;
+                <&lt_exit_AML_on_hold 1 LS(TAB)>,
+                <&mt_exit_AML_on_hold LEFT_SHIFT F2>;
 
             tapping-term-ms = <250>;
             label = "TAP_RIGHT_THUMB";
