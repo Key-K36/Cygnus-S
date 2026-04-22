@@ -51,13 +51,13 @@
 
         up {
             bindings = <&mt HOME UP_ARROW>;
-            key-positions = <7 8>;
+            key-positions = <7 6>;
             layers = <0 1 2 4>;
         };
 
         down {
             bindings = <&mt END DOWN_ARROW>;
-            key-positions = <19 20>;
+            key-positions = <18 19>;
             layers = <0 1 2 4>;
         };
 
@@ -504,7 +504,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&mt_exit_AML_on_hold LC(Z) LC(LS(V))>,
+                <&mt_exit_AML_on_hold LC(X) LC(LS(V))>,
                 <&paste_formulas_only>;
 
             tapping-term-ms = <250>;
@@ -515,7 +515,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&mt_exit_AML_on_hold LC(X) LC(V)>,
+                <&mt_exit_AML_on_hold LC(S) LC(V)>,
                 <&transpose_and_paste>,
                 <&paste_memo_only>;
 
@@ -561,7 +561,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&kp LS(LEFT_ARROW)>,
+                <&lt_exit_AML_on_hold 4 LS(LEFT_ARROW)>,
                 <&row_cut>,
                 <&row_minus>,
                 <&kp LA(LS(LEFT_ARROW))>;
@@ -599,7 +599,9 @@
         tap_enter: tap_enter {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&lt_exit_AML_on_hold 4 LS(ENTER)>, <&mt F12 LA(ENTER)>;
+            bindings =
+                <&mt_exit_AML_on_hold LC(Z) LS(ENTER)>,
+                <&mt F12 LA(ENTER)>;
 
             tapping-term-ms = <250>;
             label = "TAP_ENTER";
@@ -622,10 +624,10 @@
 
         MOUSE_NUM {
             bindings = <
-&mt LC(NUMBER_1) KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                                   &mt ASTERISK KP_MULTIPLY                                                              &ht_ctrlclick_shiftclick 0 0  &mkp LCLK                      &mt_exit_AML_on_hold LA(LEFT_ARROW) LC(PAGE_UP)  &mt_exit_AML_on_hold LA(RIGHT_ARROW) LC(PAGE_DOWN)  &tap_rclk
-&mt LC(KP_MINUS) KP_MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6                                   &mt LC(KP_PLUS) KP_PLUS                &trans                   &tap_colum_cut_minus  &window_hold                  &tap_paste1                    &tap_paste2                                      &tap_look                                           &kp LG(D)
-&ht_doublezero_kp 0 NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                                   &mt_exit_AML_on_hold LC(B) DOT         &tap_equal               &tap_colum_copy_plus  &name_change                  &mt_exit_AML_on_hold LC(S) F4  &sort                                            &tap_round                                          &mt LA(F4) LC(W)
-&lt_exit_AML_on_hold 4 LC(C)  &trans        &trans        &mt_exit_AML_on_hold LC(LEFT_SHIFT) BACKSPACE  &mt_exit_AML_on_hold LC(LS(SPACE)) F2  &kp LS(RIGHT_ARROW)      &tap_row_cut_minus    &tap_row_copy_plus                                                                                                                                                &tap_enter
+&mt LC(NUMBER_1) KP_DIVIDE    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9                                   &mt ASTERISK KP_MULTIPLY                                                              &mt_exit_AML_on_hold LA(LEFT_ARROW) LC(PAGE_UP)  &mkp LCLK    &mt_exit_AML_on_hold LA(RIGHT_ARROW) LC(PAGE_DOWN)  &ht_ctrlclick_shiftclick 0 0  &tap_rclk
+&mt LC(KP_MINUS) KP_MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6                                   &mt LC(KP_PLUS) KP_PLUS                &trans                   &tap_colum_cut_minus  &window_hold                                     &tap_paste1  &mt LC(W) LG(D)                                     &tap_look                     &trans
+&ht_doublezero_kp 0 NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                                   &mt_exit_AML_on_hold LC(B) DOT         &tap_equal               &tap_colum_copy_plus  &name_change                                     &tap_paste2  &sort                                               &tap_round                    &mt LA(F4) F4
+&lt_exit_AML_on_hold 4 LC(C)  &trans        &trans        &mt_exit_AML_on_hold LC(LEFT_SHIFT) BACKSPACE  &mt_exit_AML_on_hold LC(LS(SPACE)) F2  &kp LS(RIGHT_ARROW)      &tap_row_cut_minus    &tap_row_copy_plus                                                                                                                              &tap_enter
             >;
         };
 
@@ -649,9 +651,9 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &msc SCRL_UP    &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &msc SCRL_DOWN  &trans          &trans           &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans          &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans                      &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans          &msc SCRL_DOWN  &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans          &trans          &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                   &trans
             >;
         };
