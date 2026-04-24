@@ -611,10 +611,10 @@
 
         SYMBOL {
             bindings = <
-&trans  &mt LG(NUMBER_7) APOSTROPHE   &mt LG(NUMBER_8) LEFT_PARENTHESIS  &mt LG(NUMBER_9) RIGHT_PARENTHESIS  &kp LS(COMMA)                       &trans  &trans  &trans  &trans  &trans
-&trans  &mt LG(NUMBER_4) DOLLAR       &mt LG(NUMBER_5) PERCENT           &mt LG(NUMBER_6) AMPERSAND          &kp LS(PERIOD)  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mt LG(NUMBER_1) EXCLAMATION  &mt LG(NUMBER_2) DOUBLE_QUOTES     &mt LG(NUMBER_3) POUND              &kp COMMA       &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                        &trans                             &trans                              &trans          &trans      &trans  &trans                          &trans
+&trans                           &mt LG(NUMBER_7) APOSTROPHE   &mt LG(NUMBER_8) LEFT_PARENTHESIS  &mt LG(NUMBER_9) RIGHT_PARENTHESIS  &kp LS(COMMA)                           &trans  &trans  &trans  &trans  &trans
+&trans                           &mt LG(NUMBER_4) DOLLAR       &mt LG(NUMBER_5) PERCENT           &mt LG(NUMBER_6) AMPERSAND          &kp LS(PERIOD)  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&ht_doublezero_kp 0 KP_NUMBER_0  &mt LG(NUMBER_1) EXCLAMATION  &mt LG(NUMBER_2) DOUBLE_QUOTES     &mt LG(NUMBER_3) POUND              &kp COMMA       &tap_equal      &trans  &trans  &trans  &trans  &trans  &trans
+&trans                           &trans                        &trans                             &trans                              &trans          &trans          &trans  &trans                          &trans
             >;
         };
 
