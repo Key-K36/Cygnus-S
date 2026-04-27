@@ -469,11 +469,7 @@
         tap_rclk: tap_rclk {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings =
-                <&mkp RCLK>,
-                <&mt_exit_AML_on_hold LC(S) F9>,
-                <&auto_calculation_off>,
-                <&auto_calculation>;
+            bindings = <&mkp RCLK>, <&kp F9>, <&kp LC(S)>;
 
             tapping-term-ms = <250>;
             label = "TAP_RCLK";
@@ -491,11 +487,7 @@
         tap_paste: tap_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings =
-                <&mt_exit_AML_on_hold LC(V) LC(LS(V))>,
-                <&paste_formulas_only>,
-                <&transpose_and_paste>,
-                <&paste_memo_only>;
+            bindings = <&kp LC(LS(V))>, <&kp LC(V)>, <&paste_formulas_only>;
 
             tapping-term-ms = <250>;
             label = "TAP_PASTE";
@@ -565,7 +557,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings =
-                <&mt LS(BACKSLASH) BACKSLASH>,
+                <&ht_calculation 0 0>,
                 <&colum_cut>,
                 <&colum_minus>,
                 <&kp LA(LS(LEFT_ARROW))>;
@@ -583,6 +575,28 @@
 
             tapping-term-ms = <250>;
             label = "TAP_ENTER";
+        };
+
+        tap_cs_clk_paste: tap_cs_clk_paste {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            label = "TAP_CS_CLK_PASTE";
+            bindings =
+                <&ht_ctrlclick_shiftclick 0 0>,
+                <&transpose_and_paste>,
+                <&paste_memo_only>;
+        };
+
+        ht_calculation: ht_calculation {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&auto_calculation>, <&auto_calculation_off>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            label = "HT_CALCULATION";
         };
     };
 
@@ -602,19 +616,19 @@
 
         MOUSE_NUM {
             bindings = <
-&mt LC(NUMBER_1) KP_DIVIDE       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                                &mt ASTERISK KP_MULTIPLY                                                              &mt_exit_AML_on_hold LA(RIGHT_ARROW) LC(Y)       &mkp LCLK                            &tap_paste                                &ht_ctrlclick_shiftclick 0 0  &tap_rclk
-&mt LC(KP_MINUS) KP_MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                                &mt LC(KP_PLUS) KP_PLUS                &trans                   &tap_colum_cut_minus  &mt_exit_AML_on_hold LA(LEFT_ARROW) LC(PAGE_UP)  &mt_exit_AML_on_hold HOME UP_ARROW   &mt_exit_AML_on_hold LC(X) LC(PAGE_DOWN)  &tap_look                     &window_hold
-&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                                &mt_exit_AML_on_hold LC(B) DOT         &tap_equal               &tap_colum_copy_plus  &name_change                                     &mt_exit_AML_on_hold END DOWN_ARROW  &sort                                     &tap_round                    &mt LA(F4) F4
-&lt_exit_AML_on_hold 4 LC(C)     &trans           &trans           &mt_exit_AML_on_hold LC(LEFT_SHIFT) BACKSPACE  &mt_exit_AML_on_hold LC(LS(SPACE)) F2  &kp LS(RIGHT_ARROW)      &tap_row_cut_minus    &tap_row_copy_plus                                                                                                                                            &tap_enter
+&mt LC(NUMBER_1) KP_DIVIDE       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                                &mt ASTERISK KP_MULTIPLY                                                              &mt_exit_AML_on_hold LA(RIGHT_ARROW) LC(Y)       &mkp LCLK                            &tap_paste                                &tap_cs_clk_paste  &tap_rclk
+&mt LC(KP_MINUS) KP_MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6                                &mt LC(KP_PLUS) KP_PLUS                &trans                   &tap_colum_cut_minus  &mt_exit_AML_on_hold LA(LEFT_ARROW) LC(PAGE_UP)  &mt_exit_AML_on_hold HOME UP_ARROW   &mt_exit_AML_on_hold LC(X) LC(PAGE_DOWN)  &tap_look          &window_hold
+&ht_doublezero_kp 0 KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3                                &mt_exit_AML_on_hold LC(B) DOT         &tap_equal               &tap_colum_copy_plus  &name_change                                     &mt_exit_AML_on_hold END DOWN_ARROW  &sort                                     &tap_round         &mt LA(F4) F4
+&lt_exit_AML_on_hold 4 LC(C)     &trans           &trans           &mt_exit_AML_on_hold LC(LEFT_SHIFT) BACKSPACE  &mt_exit_AML_on_hold LC(LS(SPACE)) F2  &kp LS(RIGHT_ARROW)      &tap_row_cut_minus    &tap_row_copy_plus                                                                                                                                 &tap_enter
             >;
         };
 
         SYMBOL {
             bindings = <
-&trans                           &mt LG(NUMBER_7) APOSTROPHE   &mt LG(NUMBER_8) LEFT_PARENTHESIS  &mt LG(NUMBER_9) RIGHT_PARENTHESIS  &kp LS(COMMA)                           &trans  &trans  &trans  &trans  &trans
-&trans                           &mt LG(NUMBER_4) DOLLAR       &mt LG(NUMBER_5) PERCENT           &mt LG(NUMBER_6) AMPERSAND          &kp LS(PERIOD)  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&ht_doublezero_kp 0 KP_NUMBER_0  &mt LG(NUMBER_1) EXCLAMATION  &mt LG(NUMBER_2) DOUBLE_QUOTES     &mt LG(NUMBER_3) POUND              &kp COMMA       &tap_equal      &trans  &trans  &trans  &trans  &trans  &trans
-&trans                           &trans                        &trans                             &trans                              &trans          &trans          &trans  &trans                          &trans
+&mt_exit_AML_on_hold LS(BACKSLASH) BACKSLASH  &mt LG(NUMBER_7) APOSTROPHE   &mt LG(NUMBER_8) LEFT_PARENTHESIS  &mt LG(NUMBER_9) RIGHT_PARENTHESIS  &kp LS(COMMA)                           &trans  &trans  &trans  &trans  &trans
+&trans                                        &mt LG(NUMBER_4) DOLLAR       &mt LG(NUMBER_5) PERCENT           &mt LG(NUMBER_6) AMPERSAND          &kp LS(PERIOD)  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&ht_doublezero_kp 0 KP_NUMBER_0               &mt LG(NUMBER_1) EXCLAMATION  &mt LG(NUMBER_2) DOUBLE_QUOTES     &mt LG(NUMBER_3) POUND              &kp COMMA       &tap_equal      &trans  &trans  &trans  &trans  &trans  &trans
+&trans                                        &trans                        &trans                             &trans                              &trans          &trans          &trans  &trans                          &trans
             >;
         };
 
