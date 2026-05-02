@@ -222,6 +222,20 @@
             label = "AUTO_CALCULATION_OFF";
         };
 
+        name_change: name_change {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mkp LCLK &kp F2>;
+            label = "NAME_CHANGE";
+        };
+
+        sheet_delete: seet_delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(E) &kp L &kp ENTER>;
+            label = "SEET_DELETE";
+        };
+
         double_zero: double_zero {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -283,20 +297,6 @@
             #binding-cells = <0>;
             bindings = <&kp LC(SPACE) &kp LC(X)>;
             label = "COLUM_CUT";
-        };
-
-        name_change: name_change {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mkp LCLK &kp F2>;
-            label = "NAME_CHANGE";
-        };
-
-        sheet_delete: seet_delete {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(E) &kp L &kp ENTER>;
-            label = "SEET_DELETE";
         };
 
         vlookup: vlookup {
@@ -423,6 +423,17 @@
             label = "HT_CTRLCLICK_SHIFTCLICK";
         };
 
+        ht_calculation: ht_calculation {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&auto_calculation>, <&auto_calculation_off>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+            label = "HT_CALCULATION";
+        };
+
         ht_kp_vlookup: ht_kp_vlookup {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&vlookup>;
@@ -475,15 +486,6 @@
             label = "TAP_RCLK";
         };
 
-        tap_equal: tap_equal {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&lt 6 EQUAL>, <&sum>, <&sumproduct>;
-
-            tapping-term-ms = <250>;
-            label = "TAP_EQUAL";
-        };
-
         tap_paste: tap_paste {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -491,6 +493,38 @@
 
             tapping-term-ms = <250>;
             label = "TAP_PASTE";
+        };
+
+        tap_csclick_paste: tap_csclick_paste {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            label = "TAP_CSCLICK_PASTE";
+            bindings =
+                <&ht_ctrlclick_shiftclick 0 0>,
+                <&transpose_and_paste>,
+                <&paste_memo_only>;
+        };
+
+        tap_enter: tap_enter {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings =
+                <&mt_exit_AML_on_hold LG(D) LC(PAGE_DOWN)>,
+                <&mt F12 LS(ENTER)>,
+                <&kp LA(ENTER)>;
+
+            tapping-term-ms = <250>;
+            label = "TAP_ENTER";
+        };
+
+        tap_equal: tap_equal {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&lt 6 EQUAL>, <&sum>, <&sumproduct>;
+
+            tapping-term-ms = <250>;
+            label = "TAP_EQUAL";
         };
 
         tap_look: tap_look {
@@ -564,40 +598,6 @@
 
             tapping-term-ms = <250>;
             label = "TAP_COLUM_CUT_MINUS";
-        };
-
-        tap_enter: tap_enter {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings =
-                <&mt_exit_AML_on_hold LG(D) LC(PAGE_DOWN)>,
-                <&mt F12 LS(ENTER)>,
-                <&kp LA(ENTER)>;
-
-            tapping-term-ms = <250>;
-            label = "TAP_ENTER";
-        };
-
-        tap_csclick_paste: tap_csclick_paste {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            label = "TAP_CSCLICK_PASTE";
-            bindings =
-                <&ht_ctrlclick_shiftclick 0 0>,
-                <&transpose_and_paste>,
-                <&paste_memo_only>;
-        };
-
-        ht_calculation: ht_calculation {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&auto_calculation>, <&auto_calculation_off>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
-            label = "HT_CALCULATION";
         };
 
         tap_up: tap_up {
