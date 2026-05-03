@@ -644,10 +644,10 @@
 
         SYMBOL {
             bindings = <
-&mt_exit_AML_on_hold LS(BACKSLASH) BACKSLASH  &mt_exit_AML_on_hold KP_NUMBER_7 APOSTROPHE   &mt_exit_AML_on_hold KP_NUMBER_8 LEFT_PARENTHESIS  &mt_exit_AML_on_hold KP_NUMBER_9 RIGHT_PARENTHESIS  &kp LS(COMMA)                           &trans  &trans  &trans  &trans  &trans
-&kp F4                                        &mt_exit_AML_on_hold KP_NUMBER_4 DOLLAR       &mt_exit_AML_on_hold KP_NUMBER_5 PERCENT           &mt_exit_AML_on_hold KP_NUMBER_6 AMPERSAND          &kp LS(PERIOD)  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&ht_doublezero_kp 0 KP_NUMBER_0               &mt_exit_AML_on_hold KP_NUMBER_1 EXCLAMATION  &mt_exit_AML_on_hold KP_NUMBER_2 DOUBLE_QUOTES     &mt_exit_AML_on_hold KP_NUMBER_3 POUND              &kp COMMA       &tap_equal      &trans  &trans  &trans  &trans  &trans  &trans
-&trans                                        &trans                                        &trans                                             &trans                                              &trans          &trans          &trans  &trans                          &trans
+&mt_exit_AML_on_hold LS(BACKSLASH) BACKSLASH  &mt_exit_AML_on_hold KP_NUMBER_7 APOSTROPHE   &mt_exit_AML_on_hold KP_NUMBER_8 LEFT_PARENTHESIS  &mt_exit_AML_on_hold KP_NUMBER_9 RIGHT_PARENTHESIS  &kp GRAVE                                                          &trans  &trans  &trans  &trans  &trans
+&kp F4                                        &mt_exit_AML_on_hold KP_NUMBER_4 DOLLAR       &mt_exit_AML_on_hold KP_NUMBER_5 PERCENT           &mt_exit_AML_on_hold KP_NUMBER_6 AMPERSAND          &mt_exit_AML_on_hold LS(PERIOD) LS(COMMA)  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&ht_doublezero_kp 0 KP_NUMBER_0               &mt_exit_AML_on_hold KP_NUMBER_1 EXCLAMATION  &mt_exit_AML_on_hold KP_NUMBER_2 DOUBLE_QUOTES     &mt_exit_AML_on_hold KP_NUMBER_3 POUND              &kp COMMA                                  &tap_equal      &trans  &trans  &trans  &trans  &trans  &trans
+&trans                                        &trans                                        &trans                                             &trans                                              &trans                                     &trans          &trans  &trans                          &trans
             >;
         };
 
